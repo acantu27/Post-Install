@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# SHA256 Check file without piping stuff around
+
+if [ "$#" -ne 2 ] 
+then
+	echo "Too many or too few arguments."
+	exit 1
+else
+	str_comp="$2 *$1"
+	echo "$str_comp" | shasum -a 256 --check
+fi
+

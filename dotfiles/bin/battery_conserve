@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# ######################################################################
+# FILE:			battery_conserve
+# DESCRIPTION:	Manages battery usage by enabling/disabling components
+# ARGS:			---
+# AUTHOR:		Alex Cantu
+# NOTES:		Add as startup item preferably
+# VERSION:		1.0
+# ######################################################################
+
+# When connected to eno2:
+# - Disable WiFi
+# - Enable GPU
+# - Enable gnome-tweak-tool-lid-inhibitor
+# The inverse if true if not connected to eno2.
+
+eno2_status=$(nmcli --terse --fields DEVICE,STATE dev status)
+gpu_status=$(prime-select query)
+
+function check_settings() { 
+	if [[ "$1" != $gpu_status ]] 
+	then 
+		sudo prime-select "$1" || ( zenity --error --text "Unable to change GPU settings." --ellipsize ; exit 1 ) 
+		zenity --question --text "Enabling/disabling the GPU requires a logout. Would you like to logout now?" --ellipsize
+		response=$(echo "$?")
+		if [ "$response" -eq 0 ] 
+		then 
+			gnome-session-quit --no-prompt 
+		fi 
+	fi 
+}
+
+if [[ $eno2_status =~ "eno2:connected" ]] 
+then 
+	nmcli radio wifi off
+	check_settings "nvidia"
+	if ! pgrep -x "gnome-tweak-tool-lid-inhibitor" > /dev/null 
+	then 
+		/usr/lib/gnome-tweak-tool/gnome-tweak-tool-lid-inhibitor & 
+	fi
+else
+	nmcli radio wifi on
+	check_settings "intel"
+fi

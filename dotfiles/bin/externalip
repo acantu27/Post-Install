@@ -1,0 +1,14 @@
+#!/bin/bash
+
+case "$1" in 
+	-h|-http|--http|http|"") 
+		echo -e "HTTP" ; curl -s ifconfig.me ; echo ;;
+	-s|-https|--https|https)
+		echo -e "HTTPS" ; curl -s https://icanhazip.com/ ;;
+	-d|-dns|--dns|dns)
+		echo -e "DNS" ; 
+		dig +short myip.opendns.com @resolver1.opendns.com ;;
+	*)
+		echo -e "Invalid argument used." ; exit 1;;
+esac
+

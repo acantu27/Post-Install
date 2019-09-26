@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#!/bin/bash
+
+# Base64 decode single argument and copy to clipboard
+
+if [ "$#" -ne 1 ] 
+then
+	echo "Too many or too few arguments. Can only decode one at a time."
+	exit 1
+else
+	cat ~/Documents/ascii/bender.txt
+	echo "$1" | base64 -d | base64 -d | xclip -sel clip ; echo
+fi

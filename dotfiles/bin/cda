@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# la after cd
+
+if [ "$#" -ne 1 ] 
+then
+	echo "Too many or too few arguments."
+	exit 1
+else
+	builtin cd "$@" && ls -hAg --group-directories
+fi
+

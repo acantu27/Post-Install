@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# ls after cd
+
+if [ "$#" -ne 1 ] 
+then
+	echo "Too many or too few arguments. Can only decode one at a time."
+	exit 1
+else
+	builtin cd "$@" && ls
+fi
+
