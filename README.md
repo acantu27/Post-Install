@@ -6,13 +6,18 @@ The script was tossed together for me and was not designed as a full project. Th
 
 ## How to Use / Installation
 
-1. Clone repository.
+1. Clone/download repository.
 
 2. Navigate to the directory. `cd /path/to/directory/` 
 
 3. Make the install script executable. `chmod +x post_install.sh`
 
-4. Execute the shell. It'll likely require `sudo` password. `./post_install.sh`
+4. Execute the shell. `./post_install.sh`
+
+## Requirements
+
+- Ubuntu 18.04
+	- Other Debian-based systems using `apt` might work.
 
 ## Other Post Install Scripts
 
