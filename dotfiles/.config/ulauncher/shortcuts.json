@@ -1,32 +1,72 @@
 {
-    "e177fdd9-bcea-4ffe-86c5-00eeb439ec0a": {
-        "id": "e177fdd9-bcea-4ffe-86c5-00eeb439ec0a",
+    "b2940008-4550-4527-8534-e09edcf4ec54": {
+        "id": "b2940008-4550-4527-8534-e09edcf4ec54",
         "name": "Google Search",
         "keyword": "g",
         "cmd": "https://google.com/search?q=%s",
-        "icon": "/usr/share/ulauncher/media/google-search-icon.png",
+        "icon": "~/Pictures/ulauncher/google.png",
         "is_default_search": true,
         "run_without_argument": false,
-        "added": 1563493578.8732052
+        "added": 1569479326.0607774
     },
-    "8fce0dff-b5bf-4027-bda5-14aaaa5d3e33": {
-        "id": "8fce0dff-b5bf-4027-bda5-14aaaa5d3e33",
+    "def910ca-fb13-43f2-ad72-5c342fe7750b": {
+        "id": "def910ca-fb13-43f2-ad72-5c342fe7750b",
         "name": "Stack Overflow",
-        "keyword": "so",
+        "keyword": "s",
         "cmd": "http://stackoverflow.com/search?q=%s",
-        "icon": "/usr/share/ulauncher/media/stackoverflow-icon.svg",
+        "icon": "~/Pictures/ulauncher/stackoverflow.png",
         "is_default_search": true,
         "run_without_argument": false,
-        "added": 1563493578.8732648
+        "added": 1569479326.060797
     },
-    "cd1ca95c-7117-4ca2-861b-db417a001c95": {
-        "id": "cd1ca95c-7117-4ca2-861b-db417a001c95",
+    "f01d1bca-2aef-4062-bdcd-3dc07ea7f1f7": {
+        "id": "f01d1bca-2aef-4062-bdcd-3dc07ea7f1f7",
         "name": "Wikipedia",
-        "keyword": "wiki",
+        "keyword": "w",
         "cmd": "https://en.wikipedia.org/wiki/%s",
-        "icon": "/usr/share/ulauncher/media/wikipedia-icon.png",
+        "icon": "~/Pictures/ulauncher/wikipedia.png",
         "is_default_search": true,
         "run_without_argument": false,
-        "added": 1563493578.873304
+        "added": 1569479326.0608094
+    },
+    "d95aa2e3-4d1c-482e-b0be-da18fde4105e": {
+        "id": "d95aa2e3-4d1c-482e-b0be-da18fde4105e",
+        "name": "DuckDuckGo Search",
+        "keyword": "d",
+        "cmd": "https://duckduckgo.com/?q=%s",
+        "icon": "~/Pictures/ulauncher/ddg_sunglasses.png",
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1569900284.144944
+    },
+    "f184e695-0855-4098-bc9a-cf0a3c004918": {
+        "id": "f184e695-0855-4098-bc9a-cf0a3c004918",
+        "name": "IMDb Search",
+        "keyword": "i",
+        "cmd": "https://www.imdb.com/find?ref_=nv_sr_fn&q=%s",
+        "icon": "~/Pictures/ulauncher/IMDb.png",
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1569900865.7697523
+    },
+    "5a4724d2-d459-4f7f-a429-a7ef2dab33ee": {
+        "id": "5a4724d2-d459-4f7f-a429-a7ef2dab33ee",
+        "name": "Github Search",
+        "keyword": "gh",
+        "cmd": "https://github.com/search?q=%s",
+        "icon": "~/Pictures/ulauncher/github.png",
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1569901987.5935047
+    },
+    "2dea3c88-ebcf-4e06-92e4-58301a44203a": {
+        "id": "2dea3c88-ebcf-4e06-92e4-58301a44203a",
+        "name": "Youtube Search",
+        "keyword": "y",
+        "cmd": "https://www.youtube.com/results?search_query=%s",
+        "icon": "~/Pictures/ulauncher/youtube-circle.png",
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1569902633.9297855
     }
 }
